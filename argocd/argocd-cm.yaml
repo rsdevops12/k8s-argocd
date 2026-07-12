@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-cm
+  namespace: argocd
+  labels:
+    app.kubernetes.io/name: argocd-cm
+    app.kubernetes.io/part-of: argocd
+data:
+  url: https://domen.example.uz
+
+  accounts.rustam: apiKey, login
+  accounts.rustam.enabled: "true"
+  # ----------------------------
+  # можно добавить нового пользователя, пример rustam,
+  # которого добавил
+  # ----------------------------
+
+  repositories: |
+    - type: git
+      url: https://github.com/rsdevops12/
