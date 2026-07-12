@@ -15,6 +15,9 @@ data:
   # можно добавить нового пользователя, пример rustam,
   # которого добавил
   # ----------------------------
+  accounts.user2: apiKey, login
+  accounts.user2.enabled: "false"
+
 
   repositories: |
     - type: git
